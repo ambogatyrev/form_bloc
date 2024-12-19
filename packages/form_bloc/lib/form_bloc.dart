@@ -1,4 +1,4 @@
-library form_bloc;
+library;
 
 export 'src/blocs/form/form_bloc.dart';
 export 'src/blocs/field/field_bloc.dart' hide FormBlocUtils;

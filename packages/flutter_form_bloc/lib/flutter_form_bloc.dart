@@ -1,4 +1,4 @@
-library flutter_form_bloc;
+library;
 
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:form_bloc/form_bloc.dart';

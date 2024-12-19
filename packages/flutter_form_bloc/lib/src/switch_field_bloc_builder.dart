@@ -10,7 +10,7 @@ import 'package:form_bloc/form_bloc.dart';
 /// A material design switch
 class SwitchFieldBlocBuilder extends StatelessWidget {
   const SwitchFieldBlocBuilder({
-    Key? key,
+    super.key,
     required this.booleanFieldBloc,
     required this.body,
     this.enableOnlyWhenFormBlocCanSubmit = false,
@@ -34,7 +34,7 @@ class SwitchFieldBlocBuilder extends StatelessWidget {
     this.mouseCursor,
     this.overlayColor,
     this.splashRadius,
-  }) : super(key: key);
+  });
 
   /// {@macro flutter_form_bloc.FieldBlocBuilder.fieldBloc}
   final BooleanFieldBloc booleanFieldBloc;
@@ -75,7 +75,7 @@ class SwitchFieldBlocBuilder extends StatelessWidget {
   final bool animateWhenCanShow;
 
   final TextStyle? textStyle;
-  final MaterialStateProperty<Color?>? textColor;
+  final WidgetStateProperty<Color?>? textColor;
 
   // ========== [Switch] ==========
 
@@ -86,19 +86,19 @@ class SwitchFieldBlocBuilder extends StatelessWidget {
   final ImageProvider? inactiveThumbImage;
 
   /// [Switch.thumbColor]
-  final MaterialStateProperty<Color?>? thumbColor;
+  final WidgetStateProperty<Color?>? thumbColor;
 
   /// [Switch.trackColor]
-  final MaterialStateProperty<Color?>? trackColor;
+  final WidgetStateProperty<Color?>? trackColor;
 
   /// [Switch.materialTapTargetSize]
   final MaterialTapTargetSize? materialTapTargetSize;
 
   /// [Switch.mouseCursor]
-  final MaterialStateProperty<MouseCursor?>? mouseCursor;
+  final WidgetStateProperty<MouseCursor?>? mouseCursor;
 
   /// [Switch.overlayColor]
-  final MaterialStateProperty<Color?>? overlayColor;
+  final WidgetStateProperty<Color?>? overlayColor;
 
   /// [Switch.splashRadius]
   final double? splashRadius;

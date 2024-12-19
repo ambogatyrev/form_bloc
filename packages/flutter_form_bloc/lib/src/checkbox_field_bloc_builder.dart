@@ -9,7 +9,7 @@ import 'package:form_bloc/form_bloc.dart';
 /// A material design checkbox.
 class CheckboxFieldBlocBuilder extends StatelessWidget {
   const CheckboxFieldBlocBuilder({
-    Key? key,
+    super.key,
     required this.booleanFieldBloc,
     required this.body,
     this.enableOnlyWhenFormBlocCanSubmit = false,
@@ -29,7 +29,7 @@ class CheckboxFieldBlocBuilder extends StatelessWidget {
     this.splashRadius,
     this.shape,
     this.side,
-  }) : super(key: key);
+  });
 
   /// {@macro flutter_form_bloc.FieldBlocBuilder.fieldBloc}
   final BooleanFieldBloc<dynamic> booleanFieldBloc;
@@ -68,21 +68,21 @@ class CheckboxFieldBlocBuilder extends StatelessWidget {
   final TextStyle? textStyle;
 
   /// {@macro flutter_form_bloc.FieldBlocBuilder.textColor}
-  final MaterialStateProperty<Color?>? textColor;
+  final WidgetStateProperty<Color?>? textColor;
 
   // ========== [Checkbox] ==========
 
   /// [Checkbox.mouseCursor]
-  final MaterialStateProperty<MouseCursor?>? mouseCursor;
+  final WidgetStateProperty<MouseCursor?>? mouseCursor;
 
   /// [Checkbox.fillColor]
-  final MaterialStateProperty<Color?>? fillColor;
+  final WidgetStateProperty<Color?>? fillColor;
 
   /// [Checkbox.checkColor]
-  final MaterialStateProperty<Color?>? checkColor;
+  final WidgetStateProperty<Color?>? checkColor;
 
   /// [Checkbox.overlayColor]
-  final MaterialStateProperty<Color?>? overlayColor;
+  final WidgetStateProperty<Color?>? overlayColor;
 
   /// [Checkbox.splashRadius]
   final double? splashRadius;

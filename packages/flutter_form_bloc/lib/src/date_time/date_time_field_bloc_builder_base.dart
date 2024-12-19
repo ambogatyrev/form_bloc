@@ -18,7 +18,7 @@ enum DateTimeFieldBlocBuilderBaseType {
 /// A material design date picker.
 class DateTimeFieldBlocBuilderBase<T> extends StatefulWidget {
   const DateTimeFieldBlocBuilderBase({
-    Key? key,
+    super.key,
     required this.dateTimeFieldBloc,
     required this.format,
     required this.type,
@@ -45,7 +45,7 @@ class DateTimeFieldBlocBuilderBase<T> extends StatefulWidget {
     this.textStyle,
     this.textColor,
     this.textAlign,
-  }) : super(key: key);
+  });
 
   final DateTimeFieldBlocBuilderBaseType type;
 
@@ -87,7 +87,7 @@ class DateTimeFieldBlocBuilderBase<T> extends StatefulWidget {
   /// {@macro flutter_form_bloc.FieldBlocBuilder.style}
   final TextStyle? textStyle;
 
-  final MaterialStateProperty<Color?>? textColor;
+  final WidgetStateProperty<Color?>? textColor;
 
   /// Defaults `true`
   final bool? showClearIcon;

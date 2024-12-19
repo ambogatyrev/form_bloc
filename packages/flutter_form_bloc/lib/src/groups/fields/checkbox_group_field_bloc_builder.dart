@@ -11,7 +11,7 @@ import 'package:form_bloc/form_bloc.dart';
 /// A material design checkboxes.
 class CheckboxGroupFieldBlocBuilder<Value> extends StatelessWidget {
   const CheckboxGroupFieldBlocBuilder({
-    Key? key,
+    super.key,
     required this.multiSelectFieldBloc,
     required this.itemBuilder,
     this.enableOnlyWhenFormBlocCanSubmit = false,
@@ -32,7 +32,7 @@ class CheckboxGroupFieldBlocBuilder<Value> extends StatelessWidget {
     this.side,
     this.groupStyle = const FlexGroupStyle(),
     this.canTapItemTile,
-  }) : super(key: key);
+  });
 
   /// {@macro flutter_form_bloc.FieldBlocBuilder.fieldBloc}
   final MultiSelectFieldBloc<Value, dynamic> multiSelectFieldBloc;
@@ -65,7 +65,7 @@ class CheckboxGroupFieldBlocBuilder<Value> extends StatelessWidget {
   final TextStyle? textStyle;
 
   /// {@macro flutter_form_bloc.FieldBlocBuilder.textColor}
-  final MaterialStateProperty<Color?>? textColor;
+  final WidgetStateProperty<Color?>? textColor;
 
   /// {@macro flutter_form_bloc.FieldBlocBuilder.groupStyle}
   final GroupStyle groupStyle;
@@ -78,16 +78,16 @@ class CheckboxGroupFieldBlocBuilder<Value> extends StatelessWidget {
   // ========== [Checkbox] ==========
 
   /// [Checkbox.mouseCursor]
-  final MaterialStateProperty<MouseCursor?>? mouseCursor;
+  final WidgetStateProperty<MouseCursor?>? mouseCursor;
 
   /// [Checkbox.fillColor]
-  final MaterialStateProperty<Color?>? fillColor;
+  final WidgetStateProperty<Color?>? fillColor;
 
   /// [Checkbox.checkColor]
-  final MaterialStateProperty<Color?>? checkColor;
+  final WidgetStateProperty<Color?>? checkColor;
 
   /// [Checkbox.overlayColor]
-  final MaterialStateProperty<Color?>? overlayColor;
+  final WidgetStateProperty<Color?>? overlayColor;
 
   /// [Checkbox.splashRadius]
   final double? splashRadius;

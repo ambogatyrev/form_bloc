@@ -255,7 +255,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ///   elevation: 0.0
 /// )
 /// ```
-library flutter_typeahead;
+library;
 
 import 'dart:async';
 import 'dart:math';
@@ -556,7 +556,7 @@ class TypeAheadField<T> extends StatefulWidget {
 
   /// Creates a [TypeAheadField]
   TypeAheadField({
-    Key? key,
+    super.key,
     required this.suggestionsCallback,
     required this.itemBuilder,
     required this.onSuggestionSelected,
@@ -586,8 +586,7 @@ class TypeAheadField<T> extends StatefulWidget {
     this.onTap,
   })  : assert(animationStart >= 0.0 && animationStart <= 1.0),
         assert(
-            direction == AxisDirection.down || direction == AxisDirection.up),
-        super(key: key);
+            direction == AxisDirection.down || direction == AxisDirection.up);
 
   @override
   _TypeAheadFieldState<T> createState() => _TypeAheadFieldState<T>();
