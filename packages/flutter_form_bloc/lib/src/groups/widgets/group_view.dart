@@ -338,7 +338,7 @@ class GroupView extends StatelessWidget {
     this.padding,
     required this.count,
     required this.builder,
-  })  : assert(count >= 0);
+  }) : assert(count >= 0);
 
   Iterable<Widget> _generateChildren(BuildContext context) sync* {
     for (var i = 0; i < count; i++) {

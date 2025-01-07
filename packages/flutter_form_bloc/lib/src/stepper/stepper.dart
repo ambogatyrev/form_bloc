@@ -151,7 +151,7 @@ class Stepper extends StatefulWidget {
     this.controlsBuilder,
     this.elevation,
     this.margin,
-  })  : assert(0 <= currentStep && currentStep < steps.length);
+  }) : assert(0 <= currentStep && currentStep < steps.length);
 
   /// The steps of the stepper whose titles, subtitles, icons always get shown.
   ///
@@ -342,7 +342,7 @@ class _StepperState extends State<Stepper> with TickerProviderStateMixin {
     if (!_isDark()) {
       return widget.steps[index].isActive
           ? colorScheme.primary
-          : colorScheme.onSurface.withOpacity(0.38);
+          : colorScheme.onSurface.withValues(alpha: 0.38);
     } else {
       return widget.steps[index].isActive
           ? colorScheme.secondary
@@ -476,8 +476,8 @@ class _StepperState extends State<Stepper> with TickerProviderStateMixin {
                       ? null
                       : colorScheme.primary;
                 }),
-                padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
-                    buttonPadding),
+                padding:
+                    WidgetStateProperty.all<EdgeInsetsGeometry>(buttonPadding),
                 shape: WidgetStateProperty.all<OutlinedBorder>(buttonShape),
               ),
               child: Text(localizations.continueButtonLabel),
